@@ -1,0 +1,155 @@
+.container_projetoFerias {
+    box-sizing: border-box;
+
+    background: tomato;
+    background: linear-gradient(0deg, rgba(38, 105, 83, 1) 9%, rgba(56, 156, 125, 1) 28%, rgba(114, 172, 154, 1) 71%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+
+    /* Recortar isso para outro elemento pai que englobe tudo*/
+    /* Espaçando e alinhando todos os itens, alem de  deixar responsivel com FLEX WRAP*/
+    padding: 2em;
+    padding-bottom: 5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+
+.container_alunoInformacoes {
+    box-sizing: border-box;
+    background-color: #2020209c;
+    padding: 3em 2em;
+    border-radius: 24px 60px 24px 60px;
+    box-shadow: -10px 10px 8px rgba(74, 74, 74, 0.412);
+    position: relative;
+    z-index: +2;
+    max-width: 1200px;
+}
+
+.tituloProjeto {
+    font-family: var(--fonte-especial);
+    text-align: center;
+    font-size: 8rem;
+}
+
+.subtitulo_aluno,
+#alunoNome,
+#alunoTurma {
+    display: block;
+}
+
+.subtitulo_aluno {
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+#alunoNome,
+#alunoTurma {
+    box-sizing: border-box;
+
+
+    /* max-width: 250px; */
+    width: 100%;
+    padding: .7em 1.5em;
+    margin-top: .5em;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    font-family: var(--fonte-principal);
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+
+    transition: 0.3s ease-in-out;
+}
+
+#alunoNome::placeholder {
+    color: rgb(176, 176, 176);
+}
+
+/* Formatando input e select QUANDO selecionados.*/
+#alunoNome:focus,
+#alunoTurma:focus {
+    outline: none;
+    border-color: rgb(179, 179, 179);
+}
+
+.alunoDados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.espacador_informacao {
+    margin: 1em;
+    padding: .5em;
+    /* background-color: red; */
+    flex: 1;
+    min-width: 200px;
+    max-width: 80%;
+}
+
+
+/* Reajustando o text-align e colocando cor no option */
+option {
+    color: #202020;
+    text-align: initial;
+}
+
+/* */
+
+.alertaFormulario {
+    display: none;
+    font-size: .9rem;
+    color: tomato !important;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+/* Comportamento do site a parti de 768px de largura*/
+@media (max-width: 768px) {
+
+    /* Ajustando o tamanho da fonte*/
+    .subtitulo_aluno {
+        font-size: 1.5rem;
+    }
+
+    .tituloProjeto {
+        font-size: 5rem;
+    }
+}
+
+/* Comportamento do site a parti de 468px de largura*/
+@media (max-width: 468px) {
+
+    /* Ajustando o tamanho da fonte*/
+    .subtitulo_aluno {
+        font-size: 1rem;
+    }
+
+    /* Ajustando o espaçamento do container dos alunos*/
+    .container_alunoInformacoes {
+        padding: 1.2em .9em;
+    }
+
+    /* Ajustando o tamanho da fonte*/
+    #alunoNome,
+    #alunoTurma {
+        font-size: .9rem;
+    }
+
+    .tituloProjeto {
+        font-size: 3rem;
+    }
+
+    #leiProtecaoDados{
+        font-size: .5rem !important;
+    }
+
+}

@@ -1,0 +1,17 @@
+@import url(alunoInformacoes.css);
+@import url(alunoRelato.css);
+
+:root {
+    --fonte-principal: 'DynaPuff', 'cursive';
+    --fonte-secundaria: 'Baloo 2', 'cursive';
+    --fonte-especial: 'Just Another Hand', 'cursive';
+}
+
+.ativado {
+    display: block !important;
+}
+
+#leiProtecaoDados{
+    font-size: .8rem !important;
+    text-align: center;
+}
